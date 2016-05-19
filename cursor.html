@@ -56,7 +56,10 @@
   </a-entity>
 
   <a-entity position="0 3 0" class="clickable" mixin="cube yellow"
-            rotation="0 45 0" scale=".5 .5 .5"></a-entity>
+            rotation="0 45 0" scale=".5 .5 .5">
+    <a-event name="cursor-mouseenter" scale="3 1 1" color="#FFC65D"></a-event>
+    <a-event name="cursor-mouseleave" scale="1 1 1" color="#F16745"></a-event>
+  </a-entity>
 </a-scene>
   </body>
 </html>
