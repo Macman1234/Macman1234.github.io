@@ -1,5 +1,33 @@
 <html>
+  <head>
+    
+  </head>
+  <body>
+    <a-scene>
+      <a-entity camera>
+  <a-entity cursor="fuse: true; timeout: 500"
+            position="0 0 -1"
+            geometry="primitive: ring"
+            material="color: black; shader: flat">
+  </a-entity>
+</a-entity>
 
+<a-entity id="box" cursor-listener geometry="primitive: box" material="color: blue"></a-entity>
+
+    </a-scene>
+  </body>
+<script>
+  AFRAME.registerComponent('click-color-change', {
+  init: function () {
+    var COLORS = ['red', 'green', 'blue'];
+    this.el.addEventListener('cursor-click', function () {
+      var randomIndex = Math.floor(Math.random() * COLORS.length);
+      this.setAttribute('material', 'color', COLORS[randomIndex]);
+      console.log('I was clicked!');
+    });
+  }
+});
+</script>
 
 
 </html>
