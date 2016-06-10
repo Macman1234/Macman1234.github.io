@@ -5,6 +5,7 @@
     <title>Main Page</title>
     <meta name="description" content="Github Pages Index - A-Frame">
     <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
   </head>
   <body>
     <a-scene>
@@ -35,11 +36,12 @@
   
   <a-entity position="-4 1 -4" rotation="0 45 0">
     <a-entity mixin="cube red" onclick="location.href='http://macman1234.github.io/cursor.html'">
+      <a-entity text="text: What's up" position="-4 1 -4" color="#EF2D5E"></a-entity>
     </a-entity>
   </a-entity>
 
   <a-entity position="0 1 -4">
-    <a-entity mixin="cube green" onclick="location.href='http://macman1234.github.io/test.html'">
+    <a-entity mixin="cube green" onclick="location.href='http://macman1234.github.io/model.html'">
     </a-entity>
   </a-entity>
 
